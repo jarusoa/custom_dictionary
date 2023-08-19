@@ -58,7 +58,7 @@ void Hashtable::case1(string value){
             cout << "True" << "\n";
             TimeInterval time;
             if(value.length() > 2){ // if the word has more than two letters we will search for words that have the first two letters
-            time.start();
+            time.start(); // start time
             Node* currentNode = table[index].head; // start back at the head
             value[0] = tolower(value[0]);
             int word = value.at(0) + value.at(1); // grab the first two letters according to their ASCII values and add so we can find words simular
@@ -72,15 +72,11 @@ void Hashtable::case1(string value){
                     } // end if
                     currentNode = currentNode->next;
                 } // end while
-                time.stop();
+                time.stop(); // stop time
                 cout << "Operation time: " << time.GetInterval();
                 cout << "\n";
                 return;
-                //time.stop();
-                //cout << time.GetInterval();
             } // end if
-            //time.stop();
-            //cout << "Operation time: " << time.GetInterval(); // no suggested words so we dont need operation time displayed
             return;
         } // end if
         currentNode = currentNode->next;
