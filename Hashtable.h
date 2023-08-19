@@ -14,8 +14,8 @@ class Hashtable{
     void insert(string value); // uses hash function to located index then inserts value into that linked list using linkedlist method.
     void remove(string value); // uses hash function to located index then removes value from that linked list using linkedlist method.
     void case1(string value); // case1 (Found word and suggest words)
-    void case2(string value, int index);
-    double getScore(string string1, string string2);
+    void case2(string value, int index); //case2 (Didn't find word)
+    double getScore(string string1, string string2); // gets a custom score of simularity between two strings
     void print(int index); // Prints a row of the Hashtable.
 }; // end Hashtable
 #endif
